@@ -2,6 +2,7 @@ package com.ClearTrip.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends BasePage{
@@ -32,6 +33,10 @@ public class HomePage extends BasePage{
 	
 	@FindBy(xpath="")
 	private WebElement SearchFlights;
+	
+	public HomePage() {
+		PageFactory.initElements(browser, this);
+	}
 
 	public String getPageHeaderContent(){
 		return SearchFlightsTitle.getText();

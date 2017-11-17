@@ -10,3 +10,5 @@ public enum FlightType {
 		this.name=name;
 	}
 }
+
+ 

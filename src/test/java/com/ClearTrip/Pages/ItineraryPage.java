@@ -2,8 +2,9 @@ package com.ClearTrip.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class ItineraryPage {
+public class ItineraryPage extends BasePage{
 	
 	@FindBy(xpath="")
 	private WebElement ItineraryPageHeader;
@@ -19,5 +20,7 @@ public class ItineraryPage {
 	@FindBy(xpath="")
 	private WebElement flightDuration;
 	
-	
+	public ItineraryPage() {
+		PageFactory.initElements(browser, this);
+	}
 }

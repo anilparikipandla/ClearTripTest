@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CaptureScreen {
 	static File scrFile;
-	static String destpath = ConfigReader.configMap.get("ScreenshotsPath");
+	static String destpath = ConfigReader.configFile().get("ScreenshotsPath");
 	static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	static File destFile = new File(destpath+timeStamp+".png");
 	

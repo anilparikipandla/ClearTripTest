@@ -8,10 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.PageFactory;
 
 import com.ClearTrip.Utils.Misc;
 
-public class ResultsPage {
+public class ResultsPage extends BasePage{
 	
 	private String OnwardPricesPath = "";
 	private String ReturnPricesPath = "";
@@ -33,6 +34,10 @@ public class ResultsPage {
 	
 	@FindBy(xpath="")
 	private WebElement BookFlight;
+	
+	public ResultsPage(){
+		PageFactory.initElements(browser, this);
+	}
 	
 	public String getFlightResultsPageHeader(){
 		return allAirlines.getText();
