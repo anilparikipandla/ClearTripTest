@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ClearTripTestSuite" verbose="2" parallel="false" allow-return-values="false">
+	<test verbose="2" name="BookAFlightTicket">
+		<classes>
+			<class name="com.ClearTrip.Tests">
+<!-- 				<methods>
+		        	<include name="UserRegistration" />
+		        	<include name="CartList" />
+		        	<include name="addItemsToWishlistAndVerify" />
+		        	<include name="addItemsToCartAndBuy" />
+		      	</methods>	 -->
+			</class>
+		</classes>
+	</test>
+</suite>
