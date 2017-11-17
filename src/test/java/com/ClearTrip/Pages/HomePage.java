@@ -1,5 +1,6 @@
 package com.ClearTrip.Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,8 +8,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends BasePage{
 	
-	@FindBy(xpath="")
+	@FindBy(xpath="//*[@id='SearchForm']/h1")
 	private WebElement SearchFlightsTitle;
+	
+	WebElement ele = browser.findElement(By.xpath("//*[@id='SearchForm']/h1"));
 	
 	@FindBy(xpath="")
 	private WebElement rBtn_RoundTrip;
@@ -39,7 +42,9 @@ public class HomePage extends BasePage{
 	}
 
 	public String getPageHeaderContent(){
-		return SearchFlightsTitle.getText();
+//		WebElement ele = SearchFlightsTitle;
+		String str = ele.getText();
+		return str;
 	}
 	
 	public void selectTypeOfTrip(String flightType){

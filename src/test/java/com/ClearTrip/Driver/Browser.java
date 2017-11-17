@@ -47,4 +47,9 @@ public class Browser {
 		System.out.println("Browser Closed!");
 		return browser;
 	}
+	
+	public static void openApplication(){
+		browser.get(ConfigReader.configFile().get("ApplicationUrl"));
+		System.out.println("Opening Application.");
+	}
 }
